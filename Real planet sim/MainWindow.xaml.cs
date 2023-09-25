@@ -22,7 +22,6 @@ namespace Real_planet_sim
     /// </summary>
     public partial class MainWindow : Window
     {
-        ToolTip tt = new ToolTip();
         Planet mars = new Planet();
         Planet mercury = new Planet();
         Planet uranus = new Planet();
@@ -37,7 +36,7 @@ namespace Real_planet_sim
             
             InitializeComponent();
             PositionWindowAtTopLeft();
-            
+
             timer.Start();
 
             timer.TimeChanged += UpdateTidText;
@@ -49,7 +48,6 @@ namespace Real_planet_sim
             CreatePlanets(time);
 
         }
-        
         public void CreatePlanets(string time)
         {
             mercury.StartPlanet(Merkur, sun, time, 47.87, 55);
@@ -84,6 +82,7 @@ namespace Real_planet_sim
                 }
             }
         }
+
     }
 
 }

@@ -49,6 +49,7 @@ namespace Real_planet_sim
             CreatePlanets(time);
 
         }
+        
         public void CreatePlanets(string time)
         {
             mercury.StartPlanet(Merkur, sun, time, 47.87, 55);
@@ -83,8 +84,6 @@ namespace Real_planet_sim
                 }
             }
         }
-
-       
     }
 
 }

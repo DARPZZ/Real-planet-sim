@@ -60,12 +60,14 @@ namespace Real_planet_sim
         }
         private void PositionWindowAtTopLeft()
         {
-
             Left = 0;
             Top = 0;
         }
 
-        
+        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
     
 }

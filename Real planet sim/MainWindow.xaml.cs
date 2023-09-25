@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace Real_planet_sim
     /// </summary>
     public partial class MainWindow : Window
     {
+        ToolTip tt = new ToolTip();
         Planet mars = new Planet();
         Planet mercury = new Planet();
         Planet uranus = new Planet();
@@ -35,7 +37,7 @@ namespace Real_planet_sim
             
             InitializeComponent();
             PositionWindowAtTopLeft();
-
+            
             timer.Start();
 
             timer.TimeChanged += UpdateTidText;
@@ -64,10 +66,25 @@ namespace Real_planet_sim
             Top = 0;
         }
 
-        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (sender is ListBox listBox)
+            {
+                if (listBox.SelectedItem is ListBoxItem selectedItem)
+                {
+                    string planet = selectedItem.Content.ToString().ToLower();
+                    string googleSearchUrl = $"https://en.wikipedia.org/wiki/{planet}";
 
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = googleSearchUrl,
+                        UseShellExecute = true
+                    });
+                }
+            }
         }
+
+       
     }
-    
+
 }

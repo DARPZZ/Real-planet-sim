@@ -16,7 +16,7 @@ namespace Real_planet_sim
         {
 
             double planetTid = Convert.ToDouble(time);
-            planetTid *= orbitSpeed/50;
+            planetTid *= orbitSpeed/10;
             double angleInRadians = planetTid * (Math.PI / 180.0);
             double circlePosX = Math.Cos(angleInRadians) * orbitRadius;
             double circlePosY = Math.Sin(angleInRadians) * orbitRadius;

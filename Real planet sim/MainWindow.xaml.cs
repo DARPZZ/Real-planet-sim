@@ -46,19 +46,18 @@ namespace Real_planet_sim
             timer.Start();
 
             timer.TimeChanged += UpdateTidText;
-            thTimer = new System.Threading.Timer(run, null, 0, 10);
+            thTimer = new System.Threading.Timer(run, null, 0, 50);
             Closing += SletTimer;
         }
         public void run(Object arg)
         {
-            Debug.WriteLine("workerthread: " + Thread.CurrentThread.ManagedThreadId);
+            
             thCounter++;
             Application.Current.Dispatcher.BeginInvoke(new Action(() =>
             {
                 Tid.Text = thCounter.ToString();
                 CreatePlanets(thCounter.ToString());
             }));
-
         }
 
         public void UpdateTidText(string time)

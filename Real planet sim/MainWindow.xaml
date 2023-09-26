@@ -11,24 +11,29 @@
         
         <Button x:Name="test" Content="CLICK"  Height="34" Width="122"></Button>
         <Ellipse
- x:Name="Jupiter"
- Width="25"
- Height="25"
- Fill="red"
- Stroke="Black"
- StrokeThickness="4"
- Canvas.Left="608"
- Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+             x:Name="Jupiter"
+             ToolTip="Jupiter"
+             ToolTipService.InitialShowDelay="0"
+             ToolTipService.BetweenShowDelay="0"
+             Width="25"
+             Height="25"
+             Fill="red"
+             Stroke="Black"
+             StrokeThickness="4"
+             Canvas.Left="608"
+             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Ellipse
          x:Name="sun"
-         
- Width="50"
- Height="50"
- Fill="Yellow"
- Stroke="Black"
- StrokeThickness="4"
- Canvas.Left="747"
- Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+         ToolTip="Sun"
+         ToolTipService.InitialShowDelay="0"
+         ToolTipService.BetweenShowDelay="0"
+         Width="50"
+         Height="50"
+         Fill="Yellow"
+         Stroke="Black"
+         StrokeThickness="4"
+         Canvas.Left="747"
+         Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">   
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -39,37 +44,50 @@
             </Ellipse.RenderTransform>
         </Ellipse>
         <Ellipse
-          Name="Mars"
-         Width="25"
-         Height="25"
-         Fill="Gray"
-         Stroke="Black"
-         StrokeThickness="4"
-         Canvas.Left="643"
-         Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            
+            Name="Mars"
+            ToolTip="Mars"
+            ToolTipService.InitialShowDelay="0"
+            ToolTipService.BetweenShowDelay="0"
+            Width="25"
+            Height="25"
+            Fill="Gray"
+            Stroke="Black"
+            StrokeThickness="4"
+            Canvas.Left="643"
+            Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Ellipse
-         x:Name="Merkur"
-         Width="25"
-         Height="25"
-         Fill="Black"
-         Stroke="Black"
-         StrokeThickness="4"
-         Canvas.Left="578"
-         Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+             x:Name="Merkur"
+             ToolTip="Merkur"
+             ToolTipService.InitialShowDelay="0"
+             ToolTipService.BetweenShowDelay="0"
+             Width="25"
+             Height="25"
+             Fill="Black"
+             Stroke="Black"
+             StrokeThickness="4"
+             Canvas.Left="578"
+             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Ellipse
-         x:Name="Uranus"
-         Width="25"
-         Height="24"
-         Fill="Green"
-         Stroke="Black"
-         StrokeThickness="4"
-         Canvas.Left="681"
-         Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+             x:Name="Uranus"
+             ToolTip="Uranus"
+             ToolTipService.InitialShowDelay="0"
+             ToolTipService.BetweenShowDelay="0"
+             Width="25"
+             Height="24"
+             Fill="Green"
+             Stroke="Black"
+             StrokeThickness="4"
+             Canvas.Left="681"
+             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="SUN" Canvas.Left="750" Canvas.Top="373" FontWeight="Bold" Height="36" Width="46" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBox Width="150" x:Name="Tid" Canvas.Left="173" Canvas.Top="17" Text="Initial Text"></TextBox>
         <Ellipse
             
             x:Name="Neptune"
+            ToolTip="Neptune"
+            ToolTipService.InitialShowDelay="0"
+            ToolTipService.BetweenShowDelay="0"
             Width="25"
             Height="25"
             Fill="Purple"
@@ -91,6 +109,9 @@
             Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Ellipse
             x:Name="Saturn"
+            ToolTip="Saturn"
+            ToolTipService.InitialShowDelay="0"
+            ToolTipService.BetweenShowDelay="0"
             Width="25"
             Height="25"
             Fill="Sienna"
@@ -100,6 +121,9 @@
             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Ellipse
             x:Name="Venus"
+            ToolTip="Venus"
+            ToolTipService.InitialShowDelay="0"
+            ToolTipService.BetweenShowDelay="0"
             Width="25"
             Height="25"
             Fill="HotPink"

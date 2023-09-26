@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +24,7 @@ namespace Real_planet_sim
     /// </summary>
     public partial class MainWindow : Window
     {
+        private System.Threading.Timer thTimer;
         Planet mars = new Planet();
         Planet mercury = new Planet();
         Planet uranus = new Planet();
@@ -31,21 +34,40 @@ namespace Real_planet_sim
         Planet neptune = new Planet();
         Planet jupiter = new Planet();
         Timer timer = new Timer();
+       int thCounter = 0;
+
         public MainWindow()
         {
-            
+
+           
             InitializeComponent();
             PositionWindowAtTopLeft();
 
             timer.Start();
 
             timer.TimeChanged += UpdateTidText;
+            thTimer = new System.Threading.Timer(run, null, 0, 10);
+            Closing += SletTimer;
         }
-       
+        public void run(Object arg)
+        {
+            Debug.WriteLine("workerthread: " + Thread.CurrentThread.ManagedThreadId);
+            thCounter++;
+            Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                Tid.Text = thCounter.ToString();
+                CreatePlanets(thCounter.ToString());
+            }));
+
+        }
+
         public void UpdateTidText(string time)
         {
-            Tid.Text = time;
-            CreatePlanets(time);
+            
+            
+                //Tid.Text = time;
+                //CreatePlanets(time);
+
 
         }
         public void CreatePlanets(string time)
@@ -82,7 +104,14 @@ namespace Real_planet_sim
                 }
             }
         }
-
+        /*
+         * Sørgere for at man ikke for worker thread fejæ, når man lukker programmet
+         */
+        private void SletTimer(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            thTimer.Change(Timeout.Infinite, Timeout.Infinite);
+            thTimer.Dispose();
+        }
     }
 
 }

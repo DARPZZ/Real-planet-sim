@@ -41,7 +41,7 @@ namespace Real_planet_sim
             thCounter++;
             Application.Current.Dispatcher.BeginInvoke(new Action(() =>
             {
-                Tid.Text = thCounter.ToString();
+                
                 CreatePlanets(thCounter.ToString());
             }));
         }
@@ -50,7 +50,7 @@ namespace Real_planet_sim
         {
 
 
-            //Tid.Text = time;
+            
             //CreatePlanets(time);
 
 

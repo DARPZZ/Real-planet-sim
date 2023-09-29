@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Numerics;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
@@ -7,7 +9,7 @@ using System.Windows.Controls;
 namespace Real_planet_sim
 {
   
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private System.Threading.Timer thTimer;
         Planet mars = new Planet();
@@ -22,14 +24,17 @@ namespace Real_planet_sim
         Timer timer = new Timer();
         int thCounter = 0;
 
+        public event PropertyChangedEventHandler? PropertyChanged;
+
         public MainWindow()
         {
 
            
             InitializeComponent();
             PositionWindowAtTopLeft();
-
             timer.Start();
+
+           
 
             timer.TimeChanged += UpdateTidText;
             thTimer = new System.Threading.Timer(run, null, 0, 1);
@@ -57,15 +62,15 @@ namespace Real_planet_sim
         }
         public void CreatePlanets(string time)
         {
-            mercury.StartPlanet(Merkur, sun, time, 47.87, 55);
-            venus.StartPlanet(Venus, sun, time, 35.02, 80);
-            earth.StartPlanet(Eeath, sun, time, 29.78, 105);
-            mars.StartPlanet(Mars, sun, time, 24.077, 130);
-            jupiter.StartPlanet(Jupiter, sun, time, 13.07, 155);
-            saturn.StartPlanet(Saturn, sun, time, 9.69, 180);
-            uranus.StartPlanet(Uranus, sun, time, 6.81, 205);
-            neptune.StartPlanet(Neptune, sun, time, 5.43, 230);
-            pluto.StartPlanet(Pluto, sun, time, 4.74, 260);
+            mercury.StartPlanet(Merkur, sun, time, 47.87, 55,slider);
+            venus.StartPlanet(Venus, sun, time, 35.02, 80, slider);
+            earth.StartPlanet(Eeath, sun, time, 29.78, 105, slider);
+            mars.StartPlanet(Mars, sun, time, 24.077, 130, slider);
+            jupiter.StartPlanet(Jupiter, sun, time, 13.07, 155, slider);
+            saturn.StartPlanet(Saturn, sun, time, 9.69, 180, slider);
+            uranus.StartPlanet(Uranus, sun, time, 6.81, 205, slider);
+            neptune.StartPlanet(Neptune, sun, time, 5.43, 230, slider);
+            pluto.StartPlanet(Pluto, sun, time, 4.74, 260, slider);
         }
         private void PositionWindowAtTopLeft()
         {
@@ -99,6 +104,8 @@ namespace Real_planet_sim
             thTimer.Change(Timeout.Infinite, Timeout.Infinite);
             thTimer.Dispose();
         }
+
+        
     }
 
 }

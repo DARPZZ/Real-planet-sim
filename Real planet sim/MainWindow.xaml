@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         
          Title="MainWindow" Height="1080" Width="1920">
+
     <Canvas>
         <Ellipse
              x:Name="Jupiter"
@@ -79,7 +80,6 @@
              Canvas.Left="681"
              Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="SUN" Canvas.Left="750" Canvas.Top="373" FontWeight="Bold" Height="36" Width="46" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox Width="150" x:Name="Tid" Canvas.Left="173" Canvas.Top="17" Text="Initial Text"></TextBox>
         <Ellipse
             
             x:Name="Neptune"
@@ -157,6 +157,7 @@
                 StrokeThickness="4"
                 Canvas.Left="410"
                 Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Slider x:Name="slider" Canvas.Left="231" Canvas.Top="87" Width="282" Height="33" Maximum="1000" LargeChange="99" Minimum="101" IsDirectionReversed="True" AutoToolTipPlacement="TopLeft" TickPlacement="Both" SmallChange="24"></Slider>
 
     </Canvas>
 

@@ -11,12 +11,13 @@ namespace Real_planet_sim
 {
     public class Planet
     {
+        private double sliderValue;
 
-        public  void StartPlanet(UIElement planetName, UIElement sun, string time, double orbitSpeed, int orbitRadius)
+        public  void StartPlanet(UIElement planetName, UIElement sun, string time, double orbitSpeed, int orbitRadius, Slider slider)
         {
             
                 double planetTid = Convert.ToDouble(time);
-                planetTid *= orbitSpeed / 200;
+                planetTid *= orbitSpeed / slider.Value;
                 double angleInRadians = planetTid * (Math.PI / 180.0);
                 double circlePosX = Math.Cos(angleInRadians) * orbitRadius;
                 double circlePosY = Math.Sin(angleInRadians) * orbitRadius;

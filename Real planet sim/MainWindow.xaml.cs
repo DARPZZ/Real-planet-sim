@@ -33,8 +33,9 @@ namespace Real_planet_sim
         Planet saturn = new Planet();
         Planet neptune = new Planet();
         Planet jupiter = new Planet();
+        Planet pluto = new Planet();
         Timer timer = new Timer();
-       int thCounter = 0;
+        int thCounter = 0;
 
         public MainWindow()
         {
@@ -46,12 +47,12 @@ namespace Real_planet_sim
             timer.Start();
 
             timer.TimeChanged += UpdateTidText;
-            thTimer = new System.Threading.Timer(run, null, 0, 50);
+            thTimer = new System.Threading.Timer(run, null, 0, 1);
             Closing += SletTimer;
         }
         public void run(Object arg)
         {
-            
+
             thCounter++;
             Application.Current.Dispatcher.BeginInvoke(new Action(() =>
             {
@@ -62,10 +63,10 @@ namespace Real_planet_sim
 
         public void UpdateTidText(string time)
         {
-            
-            
-                //Tid.Text = time;
-                //CreatePlanets(time);
+
+
+            //Tid.Text = time;
+            //CreatePlanets(time);
 
 
         }
@@ -79,6 +80,7 @@ namespace Real_planet_sim
             saturn.StartPlanet(Saturn, sun, time, 9.69, 180);
             uranus.StartPlanet(Uranus, sun, time, 6.81, 205);
             neptune.StartPlanet(Neptune, sun, time, 5.43, 230);
+            pluto.StartPlanet(Pluto, sun, time, 4.74, 260);
         }
         private void PositionWindowAtTopLeft()
         {
@@ -88,6 +90,7 @@ namespace Real_planet_sim
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             if (sender is ListBox listBox)
             {
                 if (listBox.SelectedItem is ListBoxItem selectedItem)

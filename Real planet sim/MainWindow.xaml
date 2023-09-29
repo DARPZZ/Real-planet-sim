@@ -8,8 +8,6 @@
         
          Title="MainWindow" Height="1080" Width="1920">
     <Canvas>
-        
-        <Button x:Name="test" Content="CLICK"  Height="34" Width="122"></Button>
         <Ellipse
              x:Name="Jupiter"
              ToolTip="Jupiter"
@@ -33,7 +31,7 @@
          Stroke="Black"
          StrokeThickness="4"
          Canvas.Left="747"
-         Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">   
+         Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -131,7 +129,7 @@
             StrokeThickness="4"
             Canvas.Left="458"
             Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <ListBox Height="368" Width="197" Canvas.Top="202" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged">
+        <ListBox Height="391" Width="197" Canvas.Top="202" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged">
 
             <ListBoxItem Background="White" Content="SUN" FontWeight="Bold" FontSize="25" Foreground="Yellow"/>
             <ListBoxItem Background="white" Content="Mercury" FontWeight="Bold" FontSize="25" Foreground="black"/>
@@ -145,7 +143,20 @@
             <ListBoxItem Background="white" Content="Uranus" FontWeight="Bold" FontSize="25" Foreground="Green"/>
             <ListBoxItem Background="white" Content="Neptune" FontWeight="Bold" FontSize="25" Foreground="Purple"/>
 
+            <ListBoxItem Background="white" Content="Pluto" FontWeight="Bold" FontSize="25" Foreground="Aqua"/>
         </ListBox>
+        <Ellipse
+                x:Name="Pluto"
+                ToolTip="Pluto"
+                ToolTipService.InitialShowDelay="0"
+                ToolTipService.BetweenShowDelay="0"
+                Width="25"
+                Height="25"
+                Fill="Aqua"
+                Stroke="Black"
+                StrokeThickness="4"
+                Canvas.Left="410"
+                Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
     </Canvas>
 

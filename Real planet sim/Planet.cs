@@ -11,24 +11,41 @@ namespace Real_planet_sim
 {
     public class Planet
     {
-        
-        public void StartPlanet(UIElement planetName, UIElement sun, string time, double orbitSpeed, int orbitRadius)
+
+        public  void StartPlanet(UIElement planetName, UIElement sun, string time, double orbitSpeed, int orbitRadius)
         {
+            
+                double planetTid = Convert.ToDouble(time);
+                planetTid *= orbitSpeed / 200;
+                double angleInRadians = planetTid * (Math.PI / 180.0);
+                double circlePosX = Math.Cos(angleInRadians) * orbitRadius;
+                double circlePosY = Math.Sin(angleInRadians) * orbitRadius;
 
-            double planetTid = Convert.ToDouble(time);
-            planetTid *= orbitSpeed/10;
-            double angleInRadians = planetTid * (Math.PI / 180.0);
-            double circlePosX = Math.Cos(angleInRadians) * orbitRadius;
-            double circlePosY = Math.Sin(angleInRadians) * orbitRadius;
+                double sunCenterX = 0;
+                double sunCenterY = 0;
 
-            double sunCenterX = Canvas.GetLeft(sun) + 50 / 2;
-            double sunCenterY = Canvas.GetTop(sun) + 50 / 2;
-        
-            double planetLeft = sunCenterX + circlePosX - 25 / 2;
-            double planetTop = sunCenterY + circlePosY - 25 / 2;
+                /*
+                 * Smider tilbage til main tread
+                 */
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    sunCenterX = Canvas.GetLeft(sun) + 50 / 2;
+                    sunCenterY = Canvas.GetTop(sun) + 50 / 2;
+                });
 
-            Canvas.SetLeft(planetName, planetLeft);
-            Canvas.SetTop(planetName, planetTop);
+                double planetLeft = sunCenterX + circlePosX - 25 / 2;
+                double planetTop = sunCenterY + circlePosY - 25 / 2;
+            /*
+                * Smider tilbage til main tread
+                */
+
+            Application.Current.Dispatcher.Invoke(() =>
+                {
+                    Canvas.SetLeft(planetName, planetLeft);
+                    Canvas.SetTop(planetName, planetTop);
+                });
+           
         }
+
     }
 }

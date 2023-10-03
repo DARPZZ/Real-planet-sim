@@ -11,13 +11,17 @@
   <ItemGroup>
     <None Remove="PlanetBilleder\imgbin-mars-LKBjLfQGtd15iaFTxT4tCdT82.jpg" />
     <None Remove="PlanetBilleder\Jupiter.jpg" />
+    <None Remove="PlanetBilleder\Merkur.jpg" />
     <None Remove="PlanetBilleder\Sun.png" />
+    <None Remove="PlanetBilleder\Uranus.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="PlanetBilleder\imgbin-mars-LKBjLfQGtd15iaFTxT4tCdT82.jpg" />
     <Resource Include="PlanetBilleder\Jupiter.jpg" />
+    <Resource Include="PlanetBilleder\Merkur.jpg" />
     <Resource Include="PlanetBilleder\Sun.png" />
+    <Resource Include="PlanetBilleder\Uranus.jpg" />
   </ItemGroup>
 
 </Project>

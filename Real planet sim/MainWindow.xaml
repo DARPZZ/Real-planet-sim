@@ -30,7 +30,7 @@
 
         </Ellipse>
         <Ellipse
-             x:Name="sun"
+         x:Name="sun"
          ToolTip="Sun"
          ToolTipService.InitialShowDelay="0"
          ToolTipService.BetweenShowDelay="0"
@@ -78,17 +78,25 @@
 
         </Ellipse>
         <Ellipse
-             x:Name="Merkur"
+             Name="Merkur"
              ToolTip="Merkur"
              ToolTipService.InitialShowDelay="0"
              ToolTipService.BetweenShowDelay="0"
              Width="35"
              Height="35"
-             Fill="Black"
-             Stroke="Black"
+             Stroke="black"
              StrokeThickness="4"
-             Canvas.Left="578"
-             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+             Canvas.Left="643"
+             Canvas.Top="365"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="\PlanetBilleder\Merkur.jpg"/>
+
+            </Ellipse.Fill>
+
+
+        </Ellipse>
         <Ellipse
              x:Name="Uranus"
              ToolTip="Uranus"
@@ -96,11 +104,16 @@
              ToolTipService.BetweenShowDelay="0"
              Width="35"
              Height="35"
-             Fill="Green"
-             Stroke="Black"
+             
+             Stroke="Green"
              StrokeThickness="4"
              Canvas.Left="681"
-             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="\PlanetBilleder\Uranus.jpg"/>
+
+            </Ellipse.Fill>
+        </Ellipse>
         <Ellipse
             
             x:Name="Neptune"

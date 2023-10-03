@@ -10,26 +10,34 @@
 
     <Canvas>
         <Ellipse
-             x:Name="Jupiter"
-             ToolTip="Jupiter"
-             ToolTipService.InitialShowDelay="0"
-             ToolTipService.BetweenShowDelay="0"
-             Width="35"
-             Height="35"
-             Fill="red"
-             Stroke="Black"
-             StrokeThickness="4"
-             Canvas.Left="608"
-             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            Name="Jupiter"
+            ToolTip="Jupiter"
+            ToolTipService.InitialShowDelay="0"
+            ToolTipService.BetweenShowDelay="0"
+            Width="35"
+            Height="35"
+            Stroke="Red"
+            StrokeThickness="4"
+            Canvas.Left="643"
+            Canvas.Top="365"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="\PlanetBilleder\Jupiter.jpg"/>
+
+            </Ellipse.Fill>
+
+
+        </Ellipse>
         <Ellipse
-         x:Name="sun"
+             x:Name="sun"
          ToolTip="Sun"
          ToolTipService.InitialShowDelay="0"
          ToolTipService.BetweenShowDelay="0"
-         Width="60"
-         Height="60"
-         Fill="Yellow"
-         Stroke="Black"
+         Width="50"
+         Height="50"
+         
+         Stroke="Yellow"
          StrokeThickness="4"
          Canvas.Left="747"
          Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
@@ -41,6 +49,12 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="\PlanetBilleder\Sun.png"/>
+
+            </Ellipse.Fill>
+
+
         </Ellipse>
         <Ellipse
         Name="Mars"
@@ -87,7 +101,6 @@
              StrokeThickness="4"
              Canvas.Left="681"
              Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label Content="SUN" Canvas.Left="750" Canvas.Top="373" FontWeight="Bold" Height="36" Width="46" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Ellipse
             
             x:Name="Neptune"

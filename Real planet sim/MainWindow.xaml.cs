@@ -46,7 +46,7 @@ namespace Real_planet_sim
             thCounter++;
             Application.Current.Dispatcher.BeginInvoke(new Action(() =>
             {
-                
+
                 CreatePlanets(thCounter.ToString());
             }));
         }
@@ -55,9 +55,7 @@ namespace Real_planet_sim
         {
 
 
-            
-            //CreatePlanets(time);
-
+           // CreatePlanets(time);
 
         }
         public void CreatePlanets(string time)

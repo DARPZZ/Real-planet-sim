@@ -17,6 +17,7 @@ namespace Real_planet_sim
         {
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromMilliseconds(1);
+
             dispatcherTimer.Tick += OnTimerTick;
         }
 
@@ -33,9 +34,8 @@ namespace Real_planet_sim
         }
         public void reset()
         {
-            s = 0;
-            m = 0;
-            h = 0;
+           s = 0;
+ 
         }
 
         private void OnTimerTick(object sender, EventArgs e)

@@ -216,7 +216,7 @@
             </Ellipse.Fill>
 
         </Ellipse>
-        <Slider x:Name="slider" Canvas.Left="10" Canvas.Top="10" Width="282" Height="33" Maximum="1000" LargeChange="99" Minimum="101" IsDirectionReversed="True" AutoToolTipPlacement="TopLeft" TickPlacement="Both" SmallChange="24" Value="444"></Slider>
+        <Slider x:Name="slider" Canvas.Left="10" Canvas.Top="10" Width="282" Height="33" Maximum="1000" LargeChange="99" Minimum="1" IsDirectionReversed="True" AutoToolTipPlacement="TopLeft" TickPlacement="Both" SmallChange="24" Value="448"></Slider>
 
     </Canvas>
 

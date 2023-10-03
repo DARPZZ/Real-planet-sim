@@ -40,6 +40,9 @@ namespace Real_planet_sim
             thTimer = new System.Threading.Timer(run, null, 0, 1);
             Closing += SletTimer;
         }
+        /*
+         * Bruger System.Threading.Timer  til at opdatere planeternes position
+         */
         public void run(Object arg)
         {
 
@@ -50,7 +53,9 @@ namespace Real_planet_sim
                 CreatePlanets(thCounter.ToString());
             }));
         }
-
+        /*
+         * Bruger dispatch timeren til at opdatere planeternes position
+         */
         public void UpdateTidText(string time)
         {
 

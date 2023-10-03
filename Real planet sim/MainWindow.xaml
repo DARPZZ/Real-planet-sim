@@ -14,8 +14,8 @@
              ToolTip="Jupiter"
              ToolTipService.InitialShowDelay="0"
              ToolTipService.BetweenShowDelay="0"
-             Width="25"
-             Height="25"
+             Width="35"
+             Height="35"
              Fill="red"
              Stroke="Black"
              StrokeThickness="4"
@@ -26,8 +26,8 @@
          ToolTip="Sun"
          ToolTipService.InitialShowDelay="0"
          ToolTipService.BetweenShowDelay="0"
-         Width="50"
-         Height="50"
+         Width="60"
+         Height="60"
          Fill="Yellow"
          Stroke="Black"
          StrokeThickness="4"
@@ -43,25 +43,33 @@
             </Ellipse.RenderTransform>
         </Ellipse>
         <Ellipse
+        Name="Mars"
+        ToolTip="Mars"
+        ToolTipService.InitialShowDelay="0"
+        ToolTipService.BetweenShowDelay="0"
+        Width="35"
+        Height="35"
+        Stroke="Gray"
+        StrokeThickness="4"
+        Canvas.Left="643"
+        Canvas.Top="365"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top">
             
-            Name="Mars"
-            ToolTip="Mars"
-            ToolTipService.InitialShowDelay="0"
-            ToolTipService.BetweenShowDelay="0"
-            Width="25"
-            Height="25"
-            Fill="Gray"
-            Stroke="Black"
-            StrokeThickness="4"
-            Canvas.Left="643"
-            Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="\PlanetBilleder\imgbin-mars-LKBjLfQGtd15iaFTxT4tCdT82.jpg"/>
+                
+            </Ellipse.Fill>
+
+
+        </Ellipse>
         <Ellipse
              x:Name="Merkur"
              ToolTip="Merkur"
              ToolTipService.InitialShowDelay="0"
              ToolTipService.BetweenShowDelay="0"
-             Width="25"
-             Height="25"
+             Width="35"
+             Height="35"
              Fill="Black"
              Stroke="Black"
              StrokeThickness="4"
@@ -72,8 +80,8 @@
              ToolTip="Uranus"
              ToolTipService.InitialShowDelay="0"
              ToolTipService.BetweenShowDelay="0"
-             Width="25"
-             Height="24"
+             Width="35"
+             Height="35"
              Fill="Green"
              Stroke="Black"
              StrokeThickness="4"
@@ -86,8 +94,8 @@
             ToolTip="Neptune"
             ToolTipService.InitialShowDelay="0"
             ToolTipService.BetweenShowDelay="0"
-            Width="25"
-            Height="25"
+            Width="35"
+            Height="35"
             Fill="Purple"
             Stroke="Black"
             StrokeThickness="4"
@@ -98,8 +106,8 @@
             ToolTip="Earth"
             ToolTipService.InitialShowDelay="0"
             ToolTipService.BetweenShowDelay="0"
-            Width="25"
-            Height="25"
+            Width="35"
+            Height="35"
             Fill="Blue"
             Stroke="Black"
             StrokeThickness="4"
@@ -110,8 +118,8 @@
             ToolTip="Saturn"
             ToolTipService.InitialShowDelay="0"
             ToolTipService.BetweenShowDelay="0"
-            Width="25"
-            Height="25"
+            Width="35"
+            Height="35"
             Fill="Sienna"
             Stroke="Black"
             StrokeThickness="4"
@@ -122,8 +130,8 @@
             ToolTip="Venus"
             ToolTipService.InitialShowDelay="0"
             ToolTipService.BetweenShowDelay="0"
-            Width="25"
-            Height="25"
+            Width="35"
+            Height="35"
             Fill="HotPink"
             Stroke="Black"
             StrokeThickness="4"
@@ -150,14 +158,14 @@
                 ToolTip="Pluto"
                 ToolTipService.InitialShowDelay="0"
                 ToolTipService.BetweenShowDelay="0"
-                Width="25"
-                Height="25"
+                Width="35"
+                Height="35"
                 Fill="Aqua"
                 Stroke="Black"
                 StrokeThickness="4"
                 Canvas.Left="410"
                 Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Slider x:Name="slider" Canvas.Left="231" Canvas.Top="87" Width="282" Height="33" Maximum="1000" LargeChange="99" Minimum="101" IsDirectionReversed="True" AutoToolTipPlacement="TopLeft" TickPlacement="Both" SmallChange="24"></Slider>
+        <Slider x:Name="slider" Canvas.Left="10" Canvas.Top="10" Width="282" Height="33" Maximum="1000" LargeChange="99" Minimum="101" IsDirectionReversed="True" AutoToolTipPlacement="TopLeft" TickPlacement="Both" SmallChange="24" Value="444"></Slider>
 
     </Canvas>
 

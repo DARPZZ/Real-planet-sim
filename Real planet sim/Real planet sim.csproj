@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="PlanetBilleder\imgbin-mars-LKBjLfQGtd15iaFTxT4tCdT82.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="PlanetBilleder\imgbin-mars-LKBjLfQGtd15iaFTxT4tCdT82.jpg" />
+  </ItemGroup>
+
 </Project>

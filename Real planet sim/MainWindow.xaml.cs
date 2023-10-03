@@ -63,14 +63,14 @@ namespace Real_planet_sim
         public void CreatePlanets(string time)
         {
             mercury.StartPlanet(Merkur, sun, time, 47.87, 70,slider);
-            venus.StartPlanet(Venus, sun, time, 35.02, 106, slider);
-            earth.StartPlanet(Eeath, sun, time, 29.78, 141, slider);
-            mars.StartPlanet(Mars, sun, time, 24.077, 176, slider);
-            jupiter.StartPlanet(Jupiter, sun, time, 13.07, 211, slider);
-            saturn.StartPlanet(Saturn, sun, time, 9.69, 246, slider);
-            uranus.StartPlanet(Uranus, sun, time, 6.81, 281, slider);
-            neptune.StartPlanet(Neptune, sun, time, 5.43, 316, slider);
-            pluto.StartPlanet(Pluto, sun, time, 4.74, 351, slider);
+            venus.StartPlanet(Venus, sun, time, 35.02, 108, slider);
+            earth.StartPlanet(Eeath, sun, time, 29.78, 146, slider);
+            mars.StartPlanet(Mars, sun, time, 24.077, 184, slider);
+            jupiter.StartPlanet(Jupiter, sun, time, 13.07, 222, slider);
+            saturn.StartPlanet(Saturn, sun, time, 9.69, 260, slider);
+            uranus.StartPlanet(Uranus, sun, time, 6.81, 298, slider);
+            neptune.StartPlanet(Neptune, sun, time, 5.43, 336, slider);
+            pluto.StartPlanet(Pluto, sun, time, 4.74, 374, slider);
         }
         private void PositionWindowAtTopLeft()
         {

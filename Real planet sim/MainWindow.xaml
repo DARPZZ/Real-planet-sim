@@ -9,19 +9,20 @@
          Title="MainWindow" Height="1080" Width="1920">
 
     <Canvas>
+        <Canvas Background="blue"/>
         <Ellipse
             Name="Jupiter"
             ToolTip="Jupiter"
             ToolTipService.InitialShowDelay="0"
             ToolTipService.BetweenShowDelay="0"
             Width="35"
-            Height="35"
+            Height="36"
             Stroke="Red"
             StrokeThickness="4"
-            Canvas.Left="643"
-            Canvas.Top="365"
+            Canvas.Left="523"
+            Canvas.Top="364"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top">
+            VerticalAlignment="Top" RenderTransformOrigin="0.794,0.557">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="\PlanetBilleder\Jupiter.jpg"/>
 
@@ -65,14 +66,14 @@
         Height="35"
         Stroke="Gray"
         StrokeThickness="4"
-        Canvas.Left="643"
+        Canvas.Left="564"
         Canvas.Top="365"
         HorizontalAlignment="Left"
         VerticalAlignment="Top">
-            
+
             <Ellipse.Fill>
                 <ImageBrush ImageSource="\PlanetBilleder\imgbin-mars-LKBjLfQGtd15iaFTxT4tCdT82.jpg"/>
-                
+
             </Ellipse.Fill>
 
 
@@ -86,8 +87,8 @@
              Height="35"
              Stroke="black"
              StrokeThickness="4"
-             Canvas.Left="643"
-             Canvas.Top="365"
+             Canvas.Left="696"
+             Canvas.Top="366"
              HorizontalAlignment="Left"
              VerticalAlignment="Top">
             <Ellipse.Fill>
@@ -107,8 +108,8 @@
              
              Stroke="Green"
              StrokeThickness="4"
-             Canvas.Left="681"
-             Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top">
+             Canvas.Left="443"
+             Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="\PlanetBilleder\Uranus.jpg"/>
 
@@ -120,12 +121,12 @@
             ToolTip="Neptune"
             ToolTipService.InitialShowDelay="0"
             ToolTipService.BetweenShowDelay="0"
-            Width="35"
-            Height="35"
+            Width="34"
+            Height="34"
             Stroke="Purple"
             StrokeThickness="4"
-            Canvas.Left="548"
-            Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top">
+            Canvas.Left="397"
+            Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="\PlanetBilleder\Neptune3.jpg"/>
 
@@ -140,8 +141,8 @@
             Height="35"
             Stroke="Blue"
             StrokeThickness="4"
-            Canvas.Left="518"
-            Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top">
+            Canvas.Left="616"
+            Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.498">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="\PlanetBilleder\Earth.jpg"/>
 
@@ -157,8 +158,8 @@
             
             Stroke="Sienna"
             StrokeThickness="4"
-            Canvas.Left="488"
-            Canvas.Top="365" HorizontalAlignment="Left" VerticalAlignment="Top">
+            Canvas.Left="483"
+            Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="\PlanetBilleder\Satunr.jpg"/>
 
@@ -175,8 +176,8 @@
            
             Stroke="HotPink"
             StrokeThickness="4"
-            Canvas.Left="458"
-            Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top">
+            Canvas.Left="656"
+            Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="\PlanetBilleder\Venus.jpg"/>
 
@@ -204,12 +205,12 @@
                 ToolTipService.InitialShowDelay="0"
                 ToolTipService.BetweenShowDelay="0"
                 Width="35"
-                Height="35"
+                Height="36"
               
                 Stroke="Aqua"
                 StrokeThickness="4"
-                Canvas.Left="410"
-                Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center">
+                Canvas.Left="339"
+                Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="\PlanetBilleder\Pluto.jpg"/>
 
@@ -217,6 +218,8 @@
 
         </Ellipse>
         <Slider x:Name="slider" Canvas.Left="10" Canvas.Top="10" Width="282" Height="33" Maximum="1000" LargeChange="99" Minimum="1" IsDirectionReversed="True" AutoToolTipPlacement="TopLeft" TickPlacement="Both" SmallChange="24" Value="448"></Slider>
+        <Button Click="Dispatch" Content="Dispatch timer" Canvas.Left="24" Canvas.Top="58" Height="84" Width="91" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Click="ThreadT" Content="Thread timer" Canvas.Left="120" Canvas.Top="58" Height="84" Width="95" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
     </Canvas>
 

@@ -25,14 +25,13 @@ namespace Real_planet_sim
         int thCounter = 0;
 
         public event PropertyChangedEventHandler? PropertyChanged;
-        public delegate void  timerChange(string time);
+       
         public MainWindow()
         {
             InitializeComponent();
             PositionWindowAtTopLeft();
-            timer.Start();
-            timer.TimeChanged += UpdateTidText;
             thTimer = new System.Threading.Timer(run, null, 0, 1);
+
             Closing += SletTimer;
         }
         /*
@@ -47,6 +46,7 @@ namespace Real_planet_sim
 
                 CreatePlanets(thCounter.ToString());
             }));
+
         }
         /*
          * Bruger dispatch timeren til at opdatere planeternes position
@@ -55,7 +55,7 @@ namespace Real_planet_sim
         {
 
 
-           // CreatePlanets(time);
+           CreatePlanets(time);
 
         }
         public void CreatePlanets(string time)
@@ -99,9 +99,36 @@ namespace Real_planet_sim
          */
         private void SletTimer(object sender, CancelEventArgs e)
         {
-            thTimer.Change(Timeout.Infinite, Timeout.Infinite);
-            thTimer.Dispose();
+            if (thTimer != null)
+            {
+                thTimer.Dispose();
+            }
         }
+
+        private void ThreadT(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            slider.Value = 389;
+
+            thTimer = new System.Threading.Timer(run, null, 0, 1);
+        }
+
+        private void Dispatch(object sender, RoutedEventArgs e)
+        {
+            if (thTimer != null)
+            {
+                thTimer.Dispose();
+                thTimer = null;  
+            }
+
+            slider.Value = 40;
+
+            // Start the timer
+            timer.Start();
+            timer.TimeChanged += UpdateTidText;
+        }
+
+        
 
     }
 }

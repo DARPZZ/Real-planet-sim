@@ -79,7 +79,7 @@
         </Ellipse>
         <Ellipse
              Name="Merkur"
-             ToolTip="Merkur"
+             ToolTip="Mercury"
              ToolTipService.InitialShowDelay="0"
              ToolTipService.BetweenShowDelay="0"
              Width="35"

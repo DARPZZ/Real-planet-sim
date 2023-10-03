@@ -36,7 +36,7 @@ namespace Real_planet_sim
 
                 double planetLeft = sunCenterX + circlePosX - 25 / 2;
                 double planetTop = sunCenterY + circlePosY - 25 / 2;
-            /*
+                /*
                 * Smider tilbage til main tread
                 */
 

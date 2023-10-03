@@ -205,11 +205,17 @@
                 ToolTipService.BetweenShowDelay="0"
                 Width="35"
                 Height="35"
-                Fill="Aqua"
-                Stroke="Black"
+              
+                Stroke="Aqua"
                 StrokeThickness="4"
                 Canvas.Left="410"
-                Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="\PlanetBilleder\Pluto.jpg"/>
+
+            </Ellipse.Fill>
+
+        </Ellipse>
         <Slider x:Name="slider" Canvas.Left="10" Canvas.Top="10" Width="282" Height="33" Maximum="1000" LargeChange="99" Minimum="101" IsDirectionReversed="True" AutoToolTipPlacement="TopLeft" TickPlacement="Both" SmallChange="24" Value="444"></Slider>
 
     </Canvas>

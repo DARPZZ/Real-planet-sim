@@ -9,7 +9,7 @@ using System.Windows.Controls;
 namespace Real_planet_sim
 {
   
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window
     {
         private System.Threading.Timer thTimer;
         Planet mars = new Planet();

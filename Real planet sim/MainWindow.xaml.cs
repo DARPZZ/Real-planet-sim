@@ -95,7 +95,7 @@ namespace Real_planet_sim
             }
         }
         /*
-         * Sørgere for at man ikke for worker thread fejæ, når man lukker programmet
+         * Sørgere for at man ikke for worker thread fejl, når man lukker programmet
          */
         private void SletTimer(object sender, CancelEventArgs e)
         {

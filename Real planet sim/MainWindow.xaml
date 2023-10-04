@@ -218,8 +218,8 @@
 
         </Ellipse>
         <Slider x:Name="slider" Canvas.Left="10" Canvas.Top="10" Width="282" Height="33" Maximum="1000" LargeChange="99" Minimum="1" IsDirectionReversed="True" AutoToolTipPlacement="TopLeft" TickPlacement="Both" SmallChange="24" Value="448"></Slider>
-        <Button Click="Dispatch" Content="Dispatch timer" Canvas.Left="24" Canvas.Top="58" Height="84" Width="91" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Button Click="ThreadT" Content="Thread timer" Canvas.Left="120" Canvas.Top="58" Height="84" Width="95" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Click="Dispatch" Content="Dispatch timer" Canvas.Left="24" Canvas.Top="58" Height="38" Width="91" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button Click="ThreadT" Content="Thread timer" Canvas.Left="120" Canvas.Top="58" Height="38" Width="95" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Canvas>
 

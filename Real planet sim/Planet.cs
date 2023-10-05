@@ -11,8 +11,6 @@ namespace Real_planet_sim
 {
     public class Planet
     {
-        private double sliderValue;
-
         public  void StartPlanet(UIElement planetName, UIElement sun, string time, double orbitSpeed, int orbitRadius, Slider slider)
         {
             
@@ -26,7 +24,7 @@ namespace Real_planet_sim
                 double sunCenterY = 0;
 
                 /*
-                 * Smider tilbage til main tread
+                 * Smider tilbage til UI tread
                  */
                 Application.Current.Dispatcher.Invoke(() =>
                 {
@@ -37,7 +35,7 @@ namespace Real_planet_sim
                 double planetLeft = sunCenterX + circlePosX - 25 / 2;
                 double planetTop = sunCenterY + circlePosY - 25 / 2;
                 /*
-                * Smider tilbage til main tread
+                * Smider tilbage til UI tread
                 */
 
             Application.Current.Dispatcher.Invoke(() =>

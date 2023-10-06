@@ -23,7 +23,6 @@ namespace Real_planet_sim
         Planet pluto = new Planet();
         Timer timer = new Timer();
         int thCounter = 0;
-
         public event PropertyChangedEventHandler? PropertyChanged;
        
         public MainWindow()
@@ -53,10 +52,7 @@ namespace Real_planet_sim
          */
         public void UpdateTidText(string time)
         {
-
-
            CreatePlanets(time);
-
         }
         public void CreatePlanets(string time)
         {
@@ -127,8 +123,5 @@ namespace Real_planet_sim
             timer.Start();
             timer.TimeChanged += UpdateTidText;
         }
-
-        
-
     }
 }

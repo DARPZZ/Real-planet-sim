@@ -5,6 +5,7 @@ using System.Numerics;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using static System.Net.WebRequestMethods;
 
 namespace Real_planet_sim
 {
@@ -81,6 +82,9 @@ namespace Real_planet_sim
                 {
                     string planet = selectedItem.Content.ToString().ToLower();
                     string googleSearchUrl = $"https://en.wikipedia.org/wiki/{planet}";
+                    if(planet == "mercury")
+                    {
+                        googleSearchUrl = $"https://en.wikipedia.org/wiki/Mercury_(planet)";                    }
 
                     Process.Start(new ProcessStartInfo
                     {
